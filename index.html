@@ -179,7 +179,9 @@ section{padding-block:72px 8px;scroll-margin-top:96px}
 .proj{display:flex;flex-direction:column;padding:24px}
 .proj:hover{transform:translateY(-3px)}
 .proj > .video-cap{margin-top:0}
-.proj > .vwrap{margin-bottom:22px}
+.proj > .vwrap{margin-bottom:14px}
+.pcol-l .video-cap{margin-bottom:14px}
+.pcol-r{display:flex;flex-direction:column;flex:1;min-width:0}
 .proj[hidden]{display:none!important}
 .proj.wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:30px;padding:28px;align-items:start}
 .proj.wide .pcol-l{display:grid;gap:18px;min-width:0}
@@ -374,7 +376,7 @@ section{padding-block:72px 8px;scroll-margin-top:96px}
   </div>
   <div class="proj-grid">
 
-    <article class="card proj wide" data-cats="security" id="medical-dapp">
+    <article class="card proj" data-cats="security" id="medical-dapp">
       <div class="pcol-l">
         <div class="video-frame">
           <video id="demoVideo" controls preload="metadata" playsinline>
