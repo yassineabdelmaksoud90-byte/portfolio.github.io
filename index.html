@@ -1,0 +1,432 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Yassine Abdelmaksoud</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Portfolio de Yassine Abdelmaksoud, élève-ingénieur en télécommunications (cybersécurité, cloud). Portfolio of Yassine Abdelmaksoud, telecommunications engineering student.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700;800&display=swap">
+<style>
+/* Layout: a fixed profile rail (identity, section index, links) beside a single reading column of ledger-style sections. Projects are bordered entries with a plain pipeline diagram; the medical-record project carries the demo video. */
+:root{
+  --bg:#f1f4f7;
+  --surface:#ffffff;
+  --ink:#0d1a2b;
+  --ink-2:#38485c;
+  --muted:#64748a;
+  --line:#d5dee8;
+  --accent:#0b6e66;
+  --accent-ink:#ffffff;
+  --accent-soft:#e0f1ee;
+  --media-bg:#0a1118;
+  --media-fg:#c9d6e3;
+  --font-display:'Schibsted Grotesk','Helvetica Neue',Arial,sans-serif;
+  --font-body:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1218;--surface:#111b24;--ink:#e7eef5;--ink-2:#b4c2d1;--muted:#8394a7;--line:#22313f;
+    --accent:#4fd1b8;--accent-ink:#04130f;--accent-soft:#12302c;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b1218;--surface:#111b24;--ink:#e7eef5;--ink-2:#b4c2d1;--muted:#8394a7;--line:#22313f;
+  --accent:#4fd1b8;--accent-ink:#04130f;--accent-soft:#12302c;color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--font-body);overflow-wrap:break-word;overflow-x:clip}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+html:not([data-lang="en"]) .en{display:none}
+html[data-lang="en"] .fr{display:none}
+.mono{font-family:var(--font-mono)}
+
+.shell{display:grid;grid-template-columns:272px minmax(0,1fr);max-width:1220px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* rail */
+.rail{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;height:100vh;display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:36px 28px 32px 0;border-right:1px solid var(--line);min-width:0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.mark{width:42px;height:42px;border-radius:6px;display:grid;place-items:center;font:700 16px var(--font-display);letter-spacing:.02em;color:var(--accent-ink);background:var(--accent)}
+.brand-t{display:grid;line-height:1.25}
+.brand-t b{font:700 16px var(--font-display)}
+.brand-t span{font:400 12px var(--font-mono);color:var(--muted)}
+.index{display:grid;gap:2px;margin-top:8px}
+.index a{display:block;padding:8px 12px;border-left:2px solid var(--line);color:var(--muted);text-decoration:none;font-size:15px;font-weight:500;transition:color .15s,border-color .15s}
+.index a:hover{color:var(--ink)}
+.index a.on{color:var(--ink);border-left-color:var(--accent)}
+.rail-foot{display:grid;gap:14px}
+.lang{display:inline-flex;width:fit-content}
+.lang button{font:500 12px var(--font-mono);letter-spacing:.06em;min-height:34px;min-width:44px;cursor:pointer;color:var(--muted);background:transparent;border:1px solid var(--line)}
+.lang button:first-child{border-radius:4px 0 0 4px}
+.lang button:last-child{border-radius:0 4px 4px 0;border-left:0}
+.lang button[aria-pressed="true"]{color:var(--accent-ink);background:var(--accent);border-color:var(--accent)}
+.links{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;font-weight:500}
+
+/* main */
+main{min-width:0;padding:56px 0 48px 56px;display:grid;gap:80px}
+section{scroll-margin-top:32px;min-width:0}
+.eyebrow{display:flex;align-items:center;gap:12px;font:500 12px var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--accent)}
+h2{margin-top:14px;font:700 clamp(26px,3.4vw,34px)/1.15 var(--font-display);letter-spacing:-.015em;text-wrap:balance}
+.sec-head{display:grid;margin-bottom:32px}
+.sec-head p{margin-top:12px;max-width:60ch;color:var(--ink-2)}
+
+/* hero */
+.status{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border:1px solid var(--line);border-radius:4px;background:var(--surface);font:500 12.5px var(--font-mono);color:var(--ink-2)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+h1{margin-top:28px;font:800 clamp(40px,6.2vw,68px)/1.02 var(--font-display);letter-spacing:-.03em;text-wrap:balance}
+.role{margin-top:14px;font:600 clamp(17px,2vw,21px)/1.4 var(--font-display);color:var(--accent)}
+.lede{margin-top:22px;max-width:60ch;font-size:18px;line-height:1.7;color:var(--ink-2)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 22px;border-radius:6px;font:600 15px var(--font-body);text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--surface);transition:border-color .15s,transform .15s;cursor:pointer}
+.btn:hover{border-color:var(--accent);transform:translateY(-1px)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.glance{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:44px;border-top:1px solid var(--line)}
+.glance div{padding:16px 24px 16px 0;border-bottom:1px solid var(--line);min-width:0}
+.glance dt{font:500 11.5px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.glance dd{margin-top:4px;font-weight:500}
+
+/* ledger rows (experience, education) */
+.ledger{display:grid;border-top:1px solid var(--line)}
+.entry{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 32px;padding:28px 0;border-bottom:1px solid var(--line)}
+.when{font:500 13px/1.6 var(--font-mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.entry h3{font:700 20px/1.3 var(--font-display)}
+.where{margin-top:2px;color:var(--accent);font-weight:600}
+.entry .loc{margin-top:2px;font-size:14px;color:var(--muted)}
+.points{display:grid;gap:8px;margin-top:16px}
+.points li{position:relative;padding-left:20px;color:var(--ink-2)}
+.points li::before{content:"";position:absolute;left:0;top:.72em;width:7px;height:2px;background:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.tags li{padding:3px 10px;border:1px solid var(--line);border-radius:4px;font:500 12.5px var(--font-mono);color:var(--ink-2);background:var(--bg)}
+
+/* projects */
+.projects{display:grid;gap:28px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:32px;min-width:0}
+.proj-meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;font:500 12px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.proj-meta b{font-weight:500;color:var(--accent)}
+.proj h3{margin-top:14px;font:700 clamp(22px,2.6vw,28px)/1.2 var(--font-display);letter-spacing:-.01em;text-wrap:balance}
+.proj .desc{margin-top:12px;max-width:62ch;color:var(--ink-2)}
+.diagram{display:grid;gap:10px;margin-top:24px;padding:18px;border-radius:6px;background:var(--bg);border:1px solid var(--line)}
+.diagram .cap{font:500 11px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.node{padding:8px 12px;border:1px solid var(--line);border-radius:4px;background:var(--surface);font:500 12.5px/1.35 var(--font-mono);color:var(--ink)}
+.node.hot{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+.arr{font:500 14px var(--font-mono);color:var(--accent)}
+.metrics{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:26px}
+.metrics li{display:grid;gap:2px}
+.metrics .v{font:700 26px/1.1 var(--font-display);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.metrics .k{font:500 11.5px var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.proj .tags{margin-top:22px}
+
+/* video */
+.video{margin-top:24px}
+.video-frame{position:relative;width:100%;max-width:100%;aspect-ratio:16/9;background:var(--media-bg);border-radius:6px;overflow:hidden;display:grid;place-items:center;border:1px solid var(--line)}
+.video-frame video{width:100%;height:100%;object-fit:contain;background:var(--media-bg)}
+.video-empty{display:grid;justify-items:center;gap:14px;padding:24px;text-align:center;color:var(--media-fg)}
+.video-empty .play{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(201,214,227,.35)}
+.video-empty .play svg{width:22px;height:22px;margin-left:3px}
+.video-empty p{font:500 13px var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
+.video figcaption{margin-top:10px;font:500 12px var(--font-mono);letter-spacing:.06em;color:var(--muted)}
+
+/* skills */
+.skills{display:grid;border-top:1px solid var(--line)}
+.skill{display:grid;grid-template-columns:230px minmax(0,1fr);gap:10px 32px;padding:22px 0;border-bottom:1px solid var(--line)}
+.skill h3{font:700 16px/1.4 var(--font-display)}
+.skill .tags{margin-top:0}
+
+/* languages and contact */
+.langs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:36px;border-top:1px solid var(--line)}
+.langs div{padding:16px 16px 16px 0;border-bottom:1px solid var(--line)}
+.langs dt{font:500 11.5px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.langs dd{margin-top:4px;font-weight:600}
+.contact{display:grid;border-top:1px solid var(--line)}
+.crow{display:grid;grid-template-columns:130px minmax(0,1fr) auto;align-items:center;gap:8px 24px;padding:20px 0;border-bottom:1px solid var(--line)}
+.crow .k{font:500 11.5px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.crow .val{font-size:17px;font-weight:600;overflow-wrap:anywhere;min-width:0}
+.crow .btn{min-height:36px;padding:0 14px;font-size:13.5px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;padding-top:28px;font:400 12.5px var(--font-mono);color:var(--muted)}
+
+@media (max-width:960px){
+  .shell{grid-template-columns:minmax(0,1fr)}
+  .rail{position:static;height:auto;padding:20px 0 16px;border-right:0;border-bottom:1px solid var(--line);gap:14px}
+  .index{display:flex;overflow-x:auto;gap:4px;margin-top:0;scrollbar-width:none}
+  .index a{white-space:nowrap;border-left:0;border-bottom:2px solid var(--line);padding:8px 12px}
+  .index a.on{border-bottom-color:var(--accent)}
+  .rail-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between}
+  main{padding:40px 0 32px;gap:64px}
+}
+@media (max-width:680px){
+  .entry,.skill{grid-template-columns:minmax(0,1fr)}
+  .entry{gap:6px}
+  .glance{grid-template-columns:minmax(0,1fr)}
+  .langs{grid-template-columns:minmax(0,1fr)}
+  .crow{grid-template-columns:minmax(0,1fr) auto}
+  .crow .k{grid-column:1/-1}
+  .proj{padding:22px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn,.index a{transition:none}
+  .btn:hover{transform:none}
+}
+</style>
+<script>(function(){var l='fr';try{var s=localStorage.getItem('lang');if(s==='fr'||s==='en'){l=s}}catch(e){}document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l})();</script>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <a class="brand" href="#profile"><span class="mark">YA</span><span class="brand-t"><b>Yassine Abdelmaksoud</b><span>ENET’Com · Sfax</span></span></a>
+    <nav class="index" aria-label="Sections">
+      <a href="#profile" data-nav="profile"><span class="fr">Profil</span><span class="en">Profile</span></a>
+      <a href="#experience" data-nav="experience"><span class="fr">Expérience</span><span class="en">Experience</span></a>
+      <a href="#projects" data-nav="projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
+      <a href="#skills" data-nav="skills"><span class="fr">Compétences</span><span class="en">Skills</span></a>
+      <a href="#education" data-nav="education"><span class="fr">Formation</span><span class="en">Education</span></a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+  </div>
+  <div class="rail-foot">
+    <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-setlang="fr" aria-pressed="true">FR</button><button type="button" data-setlang="en" aria-pressed="false">EN</button></div>
+    <div class="links">
+      <a href="https://github.com/yassineabdelmaksoud90-byte" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/yassineabdelmaksoud-a99287320" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </div>
+</aside>
+
+<main>
+<section id="profile">
+  <p class="status"><i aria-hidden="true"></i><span class="fr">Disponible pour un stage PFE · février 2027</span><span class="en">Available for a PFE internship · February 2027</span></p>
+  <h1>Yassine Abdelmaksoud</h1>
+  <p class="role"><span class="fr">Élève-ingénieur en télécommunications · Cybersécurité &amp; Cloud</span><span class="en">Telecommunications engineering student · Cybersecurity &amp; Cloud</span></p>
+  <p class="lede"><span class="fr">Élève-ingénieur en 3ᵉ année à l’ENET’Com, spécialisé en cybersécurité. Je recherche un stage PFE à partir de février 2027 en cybersécurité, cloud, DevOps, intelligence artificielle et automatisation des infrastructures. Autonome, rigoureux, méthodique et orienté solutions.</span><span class="en">Third-year engineering student at ENET’Com, specialising in cybersecurity. I am looking for a PFE (final-year project) internship from February 2027 in cybersecurity, cloud, DevOps, artificial intelligence and infrastructure automation. Autonomous, rigorous, methodical and solution-oriented.</span></p>
+  <div class="cta">
+    <a class="btn primary" href="#projects"><span class="fr">Voir les projets</span><span class="en">View projects</span></a>
+    <a class="btn" href="CV.pdf" target="_blank" rel="noopener"><span class="fr">Consulter le CV</span><span class="en">Read the CV</span></a>
+    <a class="btn" href="#contact"><span class="fr">Me contacter</span><span class="en">Contact me</span></a>
+  </div>
+  <dl class="glance">
+    <div><dt><span class="fr">École</span><span class="en">School</span></dt><dd>ENET’Com, Sfax · <span class="fr">3ᵉ année</span><span class="en">3rd year</span></dd></div>
+    <div><dt><span class="fr">Spécialité</span><span class="en">Specialisation</span></dt><dd><span class="fr">Cybersécurité</span><span class="en">Cybersecurity</span></dd></div>
+    <div><dt><span class="fr">Recherche</span><span class="en">Looking for</span></dt><dd><span class="fr">Stage PFE · février 2027</span><span class="en">PFE internship · February 2027</span></dd></div>
+    <div><dt><span class="fr">Domaines visés</span><span class="en">Target fields</span></dt><dd><span class="fr">Cloud, DevOps, IA, automatisation</span><span class="en">Cloud, DevOps, AI, automation</span></dd></div>
+  </dl>
+</section>
+
+<section id="experience">
+  <div class="sec-head"><p class="eyebrow"><span class="fr">Parcours</span><span class="en">Track record</span></p><h2><span class="fr">Expérience professionnelle</span><span class="en">Professional experience</span></h2></div>
+  <div class="ledger">
+    <article class="entry">
+      <p class="when"><span class="fr">Juillet 2026</span><span class="en">July 2026</span></p>
+      <div>
+        <h3><span class="fr">Stagiaire · Développement d’une plateforme mobile</span><span class="en">Intern · Mobile platform development</span></h3>
+        <p class="where">Cisen Computer</p>
+        <p class="loc">Sfax, <span class="fr">Tunisie</span><span class="en">Tunisia</span></p>
+        <ul class="points">
+          <li><span class="fr">Développement d’une application mobile Flutter pour le suivi des réparations de l’entreprise.</span><span class="en">Built a Flutter mobile app to track the company’s repairs.</span></li>
+          <li><span class="fr">Conception et intégration du back-end Laravel (PHP) avec une base de données MySQL.</span><span class="en">Designed and integrated the Laravel (PHP) back end with a MySQL database.</span></li>
+        </ul>
+        <ul class="tags"><li>Flutter</li><li>Dart</li><li>Laravel</li><li>PHP</li><li>MySQL</li></ul>
+      </div>
+    </article>
+    <article class="entry">
+      <p class="when"><span class="fr">Juin 2025</span><span class="en">June 2025</span></p>
+      <div>
+        <h3><span class="fr">Stagiaire · Supervision des réseaux</span><span class="en">Intern · Network supervision</span></h3>
+        <p class="where">Tunisie Télécom</p>
+        <p class="loc">Sfax, <span class="fr">Tunisie</span><span class="en">Tunisia</span></p>
+        <ul class="points">
+          <li><span class="fr">Participation à la maintenance, à l’installation et à la configuration d’équipements de télécoms.</span><span class="en">Took part in the maintenance, installation and configuration of telecom equipment.</span></li>
+          <li><span class="fr">Contribution au diagnostic d’incidents et à la supervision de l’infrastructure réseau.</span><span class="en">Contributed to incident diagnosis and to supervising the network infrastructure.</span></li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="sec-head"><p class="eyebrow"><span class="fr">Réalisations</span><span class="en">Selected work</span></p><h2><span class="fr">Projets</span><span class="en">Projects</span></h2><p><span class="fr">Sécurité réseau, blockchain, SOC et supervision. Chaque projet montre son architecture et ses résultats.</span><span class="en">Network security, blockchain, SOC and monitoring. Each project shows its architecture and results.</span></p></div>
+  <div class="projects">
+
+    <article class="proj">
+      <p class="proj-meta"><span><b>PFA ENET’Com</b> · <span class="fr">Sécurité · IA</span><span class="en">Security · AI</span></span><span>2026</span></p>
+      <h3><span class="fr">Sécurisation dynamique des réseaux SDN par l’intelligence artificielle</span><span class="en">Dynamic protection of SDN networks with artificial intelligence</span></h3>
+      <p class="desc"><span class="fr">Un système de détection d’intrusion basé sur Random Forest, intégré au contrôleur Ryu, qui détecte les attaques réseau et bloque automatiquement les flux malveillants.</span><span class="en">A Random Forest intrusion detection system integrated into the Ryu controller. It detects network attacks and automatically blocks malicious flows.</span></p>
+      <div class="diagram"><p class="cap">Architecture</p>
+        <div class="flow"><span class="node">Mininet</span><span class="arr">→</span><span class="node">Switch OpenFlow 1.3</span><span class="arr">→</span><span class="node">Contrôleur Ryu</span><span class="arr">→</span><span class="node hot">IDS Random Forest</span><span class="arr">→</span><span class="node hot"><span class="fr">Règle de blocage</span><span class="en">Blocking rule</span></span></div>
+      </div>
+      <ul class="points">
+        <li><span class="fr">Détection des attaques SYN, UDP et ICMP Flood et des scans de ports.</span><span class="en">Detection of SYN, UDP and ICMP floods and port scans.</span></li>
+        <li><span class="fr">Dataset de plus de 2 000 flux, optimisé par GridSearchCV.</span><span class="en">Dataset of more than 2,000 flows, tuned with GridSearchCV.</span></li>
+        <li><span class="fr">Blocage automatique des flux malveillants par règles OpenFlow 1.3 dans un environnement Mininet virtualisé.</span><span class="en">Automatic blocking of malicious flows through OpenFlow 1.3 rules in a virtualised Mininet environment.</span></li>
+      </ul>
+      <ul class="metrics">
+        <li><span class="v">75 % → 80 %</span><span class="k">accuracy</span></li>
+        <li><span class="v">70 % → 76 %</span><span class="k"><span class="fr">rappel ATTACK</span><span class="en">ATTACK recall</span></span></li>
+        <li><span class="v">2 000+</span><span class="k"><span class="fr">flux dans le dataset</span><span class="en">flows in dataset</span></span></li>
+      </ul>
+      <ul class="tags"><li>Python</li><li>Mininet</li><li>Ryu</li><li>OpenFlow 1.3</li><li>Random Forest</li><li>Ubuntu Server</li><li>VMware</li></ul>
+    </article>
+
+    <article class="proj" id="medical-dapp">
+      <p class="proj-meta"><span><b><span class="fr">Projet ENET’Com</span><span class="en">ENET’Com project</span></b> · <span class="fr">Sécurité · Blockchain</span><span class="en">Security · Blockchain</span></span><span>2026</span></p>
+      <h3><span class="fr">DApp de dossier médical décentralisé (Ethereum)</span><span class="en">Decentralised medical record DApp (Ethereum)</span></h3>
+      <p class="desc"><span class="fr">Une application décentralisée qui protège les dossiers médicaux. Les données sont chiffrées dans le navigateur, stockées hors chaîne, et le contrat intelligent gère les droits d’accès.</span><span class="en">A decentralised application that protects medical records. Data is encrypted in the browser and stored off-chain, while the smart contract manages access rights.</span></p>
+      <figure class="video">
+        <div class="video-frame">
+          <video id="demoVideo" controls preload="metadata" playsinline hidden><source src="demo.mp4" type="video/mp4"></video>
+          <div class="video-empty" id="videoEmpty"><span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4l14 8-14 8V4z"/></svg></span><p><span class="fr">Démo vidéo à venir</span><span class="en">Video demo coming soon</span></p></div>
+        </div>
+        <figcaption><span class="fr">Démonstration vidéo du projet</span><span class="en">Video demonstration of the project</span></figcaption>
+      </figure>
+      <div class="diagram"><p class="cap">Architecture</p>
+        <div class="flow"><span class="node">ethers.js + MetaMask</span><span class="arr">→</span><span class="node hot">AES-256-GCM (PBKDF2)</span><span class="arr">→</span><span class="node"><span class="fr">Stockage off-chain</span><span class="en">Off-chain storage</span></span></div>
+        <div class="flow"><span class="node">Hash keccak256</span><span class="arr">→</span><span class="node hot">Smart contract Solidity · Sepolia</span><span class="arr">→</span><span class="node">RBAC · <span class="fr">accès temporaire</span><span class="en">timed access</span> · events</span></div>
+      </div>
+      <ul class="points">
+        <li><span class="fr">Smart contract Solidity (Hardhat) déployé sur Sepolia : contrôle d’accès RBAC, autorisations patient à durée limitée et révocables, événements on-chain.</span><span class="en">Solidity smart contract (Hardhat) deployed on Sepolia: RBAC access control, time-limited and revocable patient authorisations, on-chain events.</span></li>
+        <li><span class="fr">Chiffrement AES-256-GCM (PBKDF2, Web Crypto), stockage off-chain et hash keccak256 on-chain pour garantir l’intégrité.</span><span class="en">AES-256-GCM encryption (PBKDF2, Web Crypto), off-chain storage and an on-chain keccak256 hash to guarantee integrity.</span></li>
+        <li><span class="fr">Front-end ethers.js / MetaMask et 8 tests unitaires.</span><span class="en">ethers.js / MetaMask front end and 8 unit tests.</span></li>
+      </ul>
+      <ul class="metrics">
+        <li><span class="v">8</span><span class="k"><span class="fr">tests unitaires</span><span class="en">unit tests</span></span></li>
+        <li><span class="v">256 bit</span><span class="k">AES-GCM</span></li>
+      </ul>
+      <ul class="tags"><li>Solidity</li><li>Hardhat</li><li>Ethereum</li><li>ethers.js</li><li>MetaMask</li><li>Node.js</li><li>AES-GCM</li></ul>
+    </article>
+
+    <article class="proj">
+      <p class="proj-meta"><span><b><span class="fr">Projet personnel</span><span class="en">Personal project</span></b> · <span class="fr">Sécurité · SOC</span><span class="en">Security · SOC</span></span><span>2026</span></p>
+      <h3><span class="fr">Implémentation d’un SOC open source avec détection assistée par IA</span><span class="en">Open-source SOC with AI-assisted detection</span></h3>
+      <p class="desc"><span class="fr">Un SIEM/XDR déployé sous Windows et Linux, testé avec des attaques simulées, avec un triage des alertes assisté par un LLM local.</span><span class="en">A SIEM/XDR deployed on Windows and Linux, tested with simulated attacks, with alert triage assisted by a local LLM.</span></p>
+      <div class="diagram"><p class="cap">Architecture</p>
+        <div class="flow"><span class="node">Sysmon · Suricata</span><span class="arr">→</span><span class="node hot">Wazuh SIEM/XDR</span><span class="arr">→</span><span class="node"><span class="fr">Règles Wazuh + Sigma</span><span class="en">Wazuh + Sigma rules</span></span><span class="arr">→</span><span class="node hot"><span class="fr">Triage LLM local (Ollama)</span><span class="en">Local LLM triage (Ollama)</span></span></div>
+      </div>
+      <ul class="points">
+        <li><span class="fr">Déploiement d’un SIEM/XDR (Wazuh, Sysmon, Suricata) sous Windows/Linux, avec centralisation de 3 sources de logs.</span><span class="en">Deployed a SIEM/XDR (Wazuh, Sysmon, Suricata) on Windows/Linux, centralising 3 log sources.</span></li>
+        <li><span class="fr">Détection d’intrusions : 16 techniques MITRE ATT&amp;CK simulées via Atomic Red Team, 5 règles Wazuh personnalisées et intégration de règles Sigma.</span><span class="en">Intrusion detection: 16 MITRE ATT&amp;CK techniques simulated with Atomic Red Team, 5 custom Wazuh rules and Sigma rule integration.</span></li>
+        <li><span class="fr">Triage automatisé des alertes avec un LLM local (Ollama), avec tests de résistance aux attaques par prompt injection.</span><span class="en">Automated alert triage with a local LLM (Ollama), including resistance tests against prompt injection attacks.</span></li>
+      </ul>
+      <ul class="metrics">
+        <li><span class="v">16</span><span class="k"><span class="fr">techniques ATT&amp;CK simulées</span><span class="en">ATT&amp;CK techniques simulated</span></span></li>
+        <li><span class="v">5</span><span class="k"><span class="fr">règles Wazuh personnalisées</span><span class="en">custom Wazuh rules</span></span></li>
+        <li><span class="v">3</span><span class="k"><span class="fr">sources de logs</span><span class="en">log sources</span></span></li>
+      </ul>
+      <ul class="tags"><li>Wazuh</li><li>Sysmon</li><li>Suricata</li><li>Atomic Red Team</li><li>MITRE ATT&amp;CK</li><li>Sigma</li><li>Ollama</li></ul>
+    </article>
+
+    <article class="proj">
+      <p class="proj-meta"><span><b><span class="fr">Mini-projet ENET’Com</span><span class="en">ENET’Com mini-project</span></b> · Cloud · DevOps</span><span>2025</span></p>
+      <h3><span class="fr">Supervision et monitoring d’infrastructure</span><span class="en">Infrastructure supervision and monitoring</span></h3>
+      <p class="desc"><span class="fr">Collecte et visualisation des métriques système pour suivre l’état des services supervisés.</span><span class="en">Collection and visualisation of system metrics to track the health of supervised services.</span></p>
+      <div class="diagram"><p class="cap">Architecture</p>
+        <div class="flow"><span class="node">Node Exporter</span><span class="arr">→</span><span class="node hot">Prometheus</span><span class="arr">→</span><span class="node hot">Grafana</span></div>
+      </div>
+      <ul class="points">
+        <li><span class="fr">Déploiement de Prometheus et Node Exporter pour la collecte et le suivi des métriques système, avec configuration des cibles de supervision via prometheus.yml.</span><span class="en">Deployed Prometheus and Node Exporter to collect and track system metrics, with scrape targets configured in prometheus.yml.</span></li>
+        <li><span class="fr">Construction de tableaux de bord Grafana pour visualiser les métriques et suivre l’état des services.</span><span class="en">Built Grafana dashboards to visualise metrics and monitor service status.</span></li>
+      </ul>
+      <ul class="tags"><li>Prometheus</li><li>Grafana</li><li>Linux</li><li>PromQL</li><li>Node Exporter</li></ul>
+    </article>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="sec-head"><p class="eyebrow"><span class="fr">Outils</span><span class="en">Toolbox</span></p><h2><span class="fr">Compétences techniques</span><span class="en">Technical skills</span></h2></div>
+  <div class="skills">
+    <div class="skill"><h3><span class="fr">Réseaux &amp; Télécommunications</span><span class="en">Networks &amp; Telecom</span></h3><ul class="tags"><li>TCP/IP</li><li>VLAN</li><li>OSPF</li><li>VPN/IPsec</li><li>DNS/DHCP</li><li>SDN/OpenFlow</li><li>Cisco Packet Tracer</li></ul></div>
+    <div class="skill"><h3><span class="fr">Cybersécurité &amp; Supervision</span><span class="en">Cybersecurity &amp; Monitoring</span></h3><ul class="tags"><li>Wireshark</li><li>Suricata (IDS/IPS)</li><li>Wazuh</li><li>Sysmon</li><li>MITRE ATT&amp;CK</li><li>Sigma</li><li>Prometheus</li><li>Grafana</li></ul></div>
+    <div class="skill"><h3><span class="fr">Cloud, Virtualisation &amp; DevOps</span><span class="en">Cloud, Virtualisation &amp; DevOps</span></h3><ul class="tags"><li>AWS</li><li>OpenStack</li><li>VMware</li><li>Docker</li><li>Docker Compose</li><li>Kubernetes</li><li>Ansible</li><li>Git/GitHub</li></ul></div>
+    <div class="skill"><h3><span class="fr">Systèmes &amp; Administration</span><span class="en">Systems &amp; Administration</span></h3><ul class="tags"><li>Linux (Kali, Ubuntu, Ubuntu Server)</li><li>Windows Server (Active Directory)</li><li>PowerShell</li><li>Bash/Shell</li></ul></div>
+    <div class="skill"><h3><span class="fr">Programmation &amp; Développement</span><span class="en">Programming &amp; Development</span></h3><ul class="tags"><li>Python</li><li>C</li><li>Java (Spring Boot)</li><li>JavaScript</li><li>PHP (Laravel)</li><li>Node.js</li><li>Flutter (Dart)</li><li>MySQL</li><li>REST APIs</li><li>Postman</li></ul></div>
+    <div class="skill"><h3><span class="fr">IA &amp; Data Science</span><span class="en">AI &amp; Data Science</span></h3><ul class="tags"><li>Machine Learning</li><li><span class="fr">Classification supervisée</span><span class="en">Supervised classification</span></li><li>Random Forest</li><li><span class="fr">Préparation et traitement des datasets</span><span class="en">Dataset preparation and processing</span></li><li>Feature engineering</li></ul></div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="sec-head"><p class="eyebrow"><span class="fr">Cursus</span><span class="en">Studies</span></p><h2><span class="fr">Formation</span><span class="en">Education</span></h2></div>
+  <div class="ledger">
+    <article class="entry">
+      <p class="when">2024 – <span class="fr">Présent</span><span class="en">Present</span></p>
+      <div><h3><span class="fr">Diplôme national d’ingénieur en télécommunications</span><span class="en">National engineering degree in telecommunications</span></h3><p class="where">ENET’Com</p><p class="loc">Sfax, <span class="fr">Tunisie</span><span class="en">Tunisia</span></p></div>
+    </article>
+    <article class="entry">
+      <p class="when">2022 – 2024</p>
+      <div><h3><span class="fr">Cycle préparatoire Physique &amp; Chimie</span><span class="en">Preparatory cycle, Physics &amp; Chemistry</span></h3><p class="where">IPEIS</p><p class="loc">Sfax, <span class="fr">Tunisie</span><span class="en">Tunisia</span></p></div>
+    </article>
+  </div>
+  <dl class="langs">
+    <div><dt><span class="fr">Arabe</span><span class="en">Arabic</span></dt><dd><span class="fr">Langue maternelle</span><span class="en">Native</span></dd></div>
+    <div><dt><span class="fr">Anglais</span><span class="en">English</span></dt><dd><span class="fr">Courant</span><span class="en">Fluent</span></dd></div>
+    <div><dt><span class="fr">Français</span><span class="en">French</span></dt><dd><span class="fr">Intermédiaire</span><span class="en">Intermediate</span></dd></div>
+  </dl>
+</section>
+
+<section id="contact">
+  <div class="sec-head"><p class="eyebrow">Contact</p><h2><span class="fr">Parlons de votre stage PFE</span><span class="en">Let’s talk about your PFE internship</span></h2><p><span class="fr">Je cherche un stage PFE à partir de février 2027. Le plus simple est de m’écrire par e-mail.</span><span class="en">I am looking for a PFE internship from February 2027. The easiest way to reach me is by email.</span></p></div>
+  <div class="contact">
+    <div class="crow"><span class="k">Email</span><a class="val" id="email" href="mailto:yassineabdelmaksoud90@gmail.com">yassineabdelmaksoud90@gmail.com</a><button class="btn" type="button" id="copy"><span class="lbl"><span class="fr">Copier</span><span class="en">Copy</span></span></button></div>
+    <div class="crow"><span class="k"><span class="fr">Téléphone</span><span class="en">Phone</span></span><span class="val mono">+216 20 055 437</span></div>
+    <div class="crow"><span class="k">LinkedIn</span><a class="val" href="https://www.linkedin.com/in/yassineabdelmaksoud-a99287320" target="_blank" rel="noopener noreferrer">linkedin.com/in/yassineabdelmaksoud-a99287320</a></div>
+    <div class="crow"><span class="k">GitHub</span><a class="val" href="https://github.com/yassineabdelmaksoud90-byte" target="_blank" rel="noopener noreferrer">github.com/yassineabdelmaksoud90-byte</a></div>
+    <div class="crow"><span class="k"><span class="fr">Localisation</span><span class="en">Location</span></span><span class="val">Sfax, <span class="fr">Tunisie</span><span class="en">Tunisia</span></span></div>
+    <div class="crow"><span class="k">CV</span><a class="val" href="CV.pdf" target="_blank" rel="noopener">CV.pdf</a></div>
+  </div>
+  <p class="foot"><span>© 2026 Yassine Abdelmaksoud</span><span>Sfax, <span class="fr">Tunisie</span><span class="en">Tunisia</span></span></p>
+</section>
+</main>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+
+  /* language */
+  var langBtns=document.querySelectorAll('[data-setlang]');
+  function setLang(l,save){
+    root.setAttribute('data-lang',l);root.lang=l;
+    langBtns.forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-setlang')===l))});
+    if(save){try{localStorage.setItem('lang',l)}catch(e){}}
+  }
+  langBtns.forEach(function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-setlang'),true)})});
+  setLang(root.getAttribute('data-lang')==='en'?'en':'fr',false);
+
+  /* active section in the index */
+  var links=[].slice.call(document.querySelectorAll('[data-nav]'));
+  var secs=links.map(function(a){return document.getElementById(a.getAttribute('data-nav'))});
+  function onScroll(){
+    var cur=0,y=window.scrollY+140;
+    secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top+window.scrollY<=y){cur=i}});
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4){cur=secs.length-1}
+    links.forEach(function(a,i){a.classList.toggle('on',i===cur)});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('resize',onScroll);onScroll();
+
+  /* demo video: shown only when demo.mp4 loads, otherwise the placeholder stays */
+  var v=document.getElementById('demoVideo'),empty=document.getElementById('videoEmpty');
+  if(v&&empty){
+    v.addEventListener('loadedmetadata',function(){v.hidden=false;empty.hidden=true});
+  }
+
+  /* copy email */
+  var copyBtn=document.getElementById('copy'),emailEl=document.getElementById('email');
+  if(copyBtn&&emailEl){
+    var lbl=copyBtn.querySelector('.lbl'),orig=lbl.innerHTML;
+    copyBtn.addEventListener('click',function(){
+      function flash(m){lbl.innerHTML=m;setTimeout(function(){lbl.innerHTML=orig},1600)}
+      var ok='<span class="fr">Copié</span><span class="en">Copied</span>';
+      function fallback(){
+        try{var r=document.createRange();r.selectNodeContents(emailEl);var s=window.getSelection();s.removeAllRanges();s.addRange(r);
+          flash(document.execCommand('copy')?ok:'<span class="fr">Sélectionné</span><span class="en">Selected</span>')}catch(e){}
+      }
+      try{navigator.clipboard.writeText(emailEl.textContent).then(function(){flash(ok)},fallback)}catch(e){fallback()}
+    });
+  }
+})();
+</script>
+
+</body></html>
